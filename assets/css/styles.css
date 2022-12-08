@@ -65,6 +65,7 @@ body {
   background-color: var(--body-color);
   color: var(--text-color);
   transition: background 0.4s; /* for dark mode animation */
+  user-select: none;
 }
 
 h1, h2, h3 {
@@ -86,9 +87,29 @@ img {
 }
 
 /*=============== THEME ===============*/
+.nav__buttons {
+  display: flex;
+  align-items: center;
+  column-gap: 25px;
+}
+
+.change-theme {
+  font-size: 1.25rem;
+  color: var(--title-color);
+  cursor: pointer;
+  transition: color .3s;
+}
 
 
 /*========== Variables Dark theme ==========*/
+body.dark-theme {
+  --first-color: hsl(19, 64%, 58%);
+  --first-color-alt: hsl(19, 64%, 54%);
+  --title-color: hsl(19, 16%, 85%);
+  --text-color: hsl(19, 16%, 65%);
+  --body-color: hsl(19, 12%, 8%);
+  --container-color: hsl(19, 10%, 10%);
+}
 
 
 /*========== 
@@ -106,6 +127,11 @@ img {
 .grid {
   display: grid;
   gap: 1.5rem;
+}
+
+.button {
+  border: none;
+  outline: none;
 }
 
 .section {
@@ -209,7 +235,6 @@ img {
   color: var(--title-color);
   font-weight: var(--font-medium);
   transform: color .4s;
-  font-size: 1.3rem;
 }
 
 .nav__link:hover {
@@ -389,24 +414,330 @@ img {
 }
 
 /*=============== POPULAR ===============*/
+.popular__container {
+  padding-top:  4rem;
+  grid-template-columns: 250px;
+  justify-content: center;
+  row-gap: 5.5rem;
+}
 
+.popular__card {
+  position: relative;
+  background-color: var(--container-color);
+  padding: 7rem 2rem 1.5rem;
+  box-shadow: 0 8px 20px hsla(19, 64%, 48%, .08);
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.popular__img {
+  width: 220px;
+  position: absolute;
+  inset: 0;
+  top: -2.5rem;
+  margin: 0 auto;
+  transition: transform .4s;
+}
+
+.popular__name {
+  font-size: var(--h3-font-size);
+  font-family: var(--title-font);
+  margin-bottom: .25rem;
+}
+
+.popular__descrioptions {
+  display: block;
+  font-size: var(--smaller-font-size);
+  margin-bottom: 1rem;
+}
+
+.popular__price {
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-medium);
+  color: var(--first-color);
+}
+
+.popular__button {
+  display: flex;
+  background: var(--first-color);
+  padding: 6px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 0.95rem;
+  box-shadow: 0 4px 20px hsla(19, 64%, 20%, .2);
+  position: absolute;
+  bottom: 1.2rem;
+  right: 1.2rem;
+  cursor: pointer;
+}
+
+.popular__button:hover {
+  background-color: var(--first-color-alt);
+}
+
+.popular__card:hover .popular__img {
+  transform: translateY(-.50rem);
+}
 
 /*=============== RECENTLY ===============*/
+.recently {
+  position: relative;
+}
 
+.recently__container {
+  row-gap: 4rem;
+}
+
+.recently__data {
+  position: relative;
+  text-align: center;
+}
+
+.recently__decription {
+  margin-bottom: 2rem;
+}
+
+.recently__data-img {
+  width: 25px;
+  position: absolute;
+  top: 3.5rem;
+  right: 1.5rem;
+  transform: rotate(-30deg);
+}
+
+.recently__img {
+  width: 300px;
+  justify-self: center;
+}
+
+.recently__leaf-1,
+.recently__leaf-2 {
+  position: absolute;
+  opacity: .2;
+}
+
+.recently__leaf-1 {
+  width: 80px;
+  top: 17rem;
+  right: -.3rem;
+  transform: rotateY(180deg);
+}
+
+.recently__leaf-2 {
+  width: 50px;
+  left: -.3rem;
+  bottom: 12rem;
+  transform: rotate(40deg);
+}
 
 /*=============== NEWSLETTER ===============*/
+ .newsletter__container {
+  position: relative;
+}
 
+ .newsletter__content {
+  position: relative;
+  background-color: hsl(19, 24%, 15%);
+  border-radius: 2.5rem;
+  padding: 5rem 1rem 3rem;
+  text-align: center;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.newsletter__img {
+  width: 250px;
+  position: absolute;
+  top: -4.5rem;
+  left: -8rem;
+} 
+
+.newsletter__data .section__title {
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+.newsletter__form {
+  background-color: #fff;
+  padding: 5px 5px 5px 16px;
+  border-radius: 4rem;
+  display: flex;
+  column-gap: .5rem;
+}
+
+.newsletter__input,
+.newsletter__button {
+  font-family: var(--body-font);
+  border: none;
+  outline: none;
+}
+
+.newsletter__input {
+  width: 100%;
+  color: var(--text-color);
+  border-radius: 4rem;
+}
+
+.newsletter__button {
+  cursor: pointer;
+}
+
+.newsleter__spinach {
+  width: 30px;
+  position: absolute;
+  left: 2rem;
+  bottom: -2rem;
+  transform: rotate(45deg);
+}
 
 /*=============== FOOTER ===============*/
+.footer {
+  position: relative;
+  padding-block: 3rem 2rem;
+  overflow: hidden;
+}
 
+.ooter__container {
+  row-gap: 3rem;
+}
+
+.footer__logo {
+  display: inline-flex;
+  align-items: center;
+  column-gap: .5rem;
+  color: var(--title-color);
+  font-family: var(--title-font);
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-semi-bold);
+  margin-bottom: 1rem;
+  transition: color .3s;
+}
+
+.footer__logo img {
+  width: 35px;
+}
+
+.footer__logo:hover {
+color: var(--first-color);
+}
+
+.foote__descrioption,
+.footer__links,
+.footer__information {
+  font-size: var(--small-font-size);
+}
+
+.footer__content,
+.footer__links {
+  display: grid;
+}
+
+.footer__content {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+}
+
+.footer__title {
+  font-size: var(--h3-font-size);
+  margin-bottom: 1.5rem;
+}
+
+.footer__links {
+  row-gap: .5rem;
+}
+
+.footer__link {
+  color: var(--text-color);
+  transition: .3s;
+}
+
+.footer__link:hover {
+  color: var(--first-color);
+}
+
+.footer__social {
+  display: flex;
+  column-gap: 1.25rem;
+}
+
+.footer__social__link {
+  color: var(--first-color);
+  font-size: 1.2rem;
+  transition: color .3s, transform .3s;
+}
+
+.footer__social__link:hover {
+  color: var(--first-color-alt);
+  transform: translateY(-2px);
+}
+
+.footer__info,
+.footar__card {
+  display: flex;
+}
+
+.footer__info {
+  margin-top: 6.5rem;
+  flex-direction: column;
+}
+
+.footar__card {
+  justify-content: space-between;
+}
+
+.footar__card img {
+  width: 50px;
+}
+
+.footar__copy {
+  text-align: center;
+  font-size: var(--smaller-font-size);
+  color: var(--text-color-light);
+}
 
 /*=============== SCROLL BAR ===============*/
+::-webkit-scrollbar {
+  width: .6rem;
+  border-radius: .5rem;
+  background-color: transparent;
+}
 
+::-webkit-scrollbar-thumb {
+  border-radius: .5rem;
+  background-color: hsla(19, 8%, 65%);
+}
+
+::-webkit-scrollbar-thumb:hover { 
+  background-color: hsla(19, 8%, 55%);
+}
 
 /*=============== SCROLL UP ===============*/
+.scrollup {
+  position: fixed;
+  right: 1rem;
+  bottom: -50%;
+  background-color: var(--container-color);
+  box-shadow: 0 4px 12px hsla(19, 64%, 24%, .1);
+  display: inline-flex;
+  padding: .35rem;
+  border-radius: .25rem;
+  font-size: 1.1rem;
+  color: var(--first-color);
+  z-index: var(--z-tooltip);
+  transition: bottom .3s, transform .3s, background .4s;
+}
+
+.scrollup:hover {
+  transform: rotateY(-0.25rem);
+}
 
 
 /* Show Scroll Up*/
+.Show_scroll {
+  bottom:  3rem;
+}
 
 
 /*=============== BREAKPOINTS ===============*/
