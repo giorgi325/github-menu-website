@@ -5,35 +5,131 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!--=============== FAVICON ===============-->
+    <link rel="stylesheet" href="assets/img/favicon.png" />
     <link
       rel="shortcut icon"
       href="assets/img/favicon.png"
       type="image/x-icon"
     />
 
-    <!--=============== REMIXICONS ===============-->
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
+    <!--=============== FONTAWESOME ===============-->
+    <script
+      src="https://kit.fontawesome.com/4dd95a71c6.js"
+      crossorigin="anonymous"
+    ></script>
 
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="assets/css/styles.css" />
 
-    <title>Responsive sushi website - Bedimcode</title>
+    <title>Title</title>
   </head>
   <body>
     <!--==================== HEADER ====================-->
-    <header class="header" id="header"></header>
-    khfbcvkefbvekhfb
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="#" class="nav__logo">
+          <img src="./assets/img/logo.png" alt="Logo image" />
+          Sushi
+        </a>
+
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#home" class="nav__link">Home</a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#about" class="nav__link">About Us</a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#popular" class="nav__link">Popular</a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#recently" class="nav__link">Recently</a>
+            </li>
+          </ul>
+
+          <!-- Close button  -->
+          <div class="nav__close" id="nav-close">
+            <i class="fa-regular fa-x"></i>
+          </div>
+
+          <img src="./assets/img/leaf-branch-4.png" alt="" class="nav__img-1" />
+          <img src="./assets/img/leaf-branch-3.png" alt="" class="nav__img-2" />
+        </div>
+
+        <div class="nav__buttons">
+          <!-- <i class="fa-solid fa-moon change-theme" id="theme-button"></i> -->
+
+          <div class="nav__toggle" id="nav-toggle">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </div>
+      </nav>
+    </header>
 
     <!--==================== MAIN ====================-->
     <main class="main">
       <!--==================== HOME ====================-->
-      <section class="home section" id="home"></section>
+      <section class="home section" id="home">
+        <div class="home__container container grid">
+          <img
+            class="home__img"
+            src="./assets/img/home-sushi-rolls.png"
+            alt=""
+          />
+
+          <div class="home__data">
+            <h1 class="home__title">
+              Enjoy Delicious
+
+              <div>
+                <img src="./assets/img/home-sushi-title.png" alt="" />
+                Sushi Food
+              </div>
+            </h1>
+
+            <p class="home__descriptions">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+
+            <a href="#" class="button"
+              >Order Now <i class="fa-solid fa-arrow-right"></i
+            ></a>
+          </div>
+        </div>
+
+        <img src="assets/img/leaf-branch-2.png" alt="" class="home__leaf-1" />
+        <img src="assets/img/leaf-branch-4.png" alt="" class="home__leaf-2" />
+      </section>
 
       <!--==================== ABOUT ====================-->
-      <section class="about section" id="about"></section>
+      <section class="about section" id="about">
+        <div class="about__container container grid">
+          <div class="about__data">
+            <span class="section__subtitle">About Us</span>
+            <h2 class="section__title about__title">
+              <div>
+                We Provide
+                <img src="./assets/img/about-sushi-title.png" alt="" />
+              </div>
+
+              Healthy Food
+            </h2>
+
+            <p class="about__description">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus
+              molestias deleniti enim quisquam!
+            </p>
+          </div>
+
+          <img src="./assets/img/about-sushi.png" alt="" class="about__img" />
+        </div>
+
+        <img src="./assets/img/leaf-branch-1.png" alt="" class="about__leaf" />
+      </section>
 
       <!--==================== POPULAR ====================-->
       <section class="popular section" id="popular"></section>
