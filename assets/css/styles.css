@@ -129,6 +129,13 @@ body.dark-theme {
   gap: 1.5rem;
 }
 
+.userName {
+  margin-bottom: 10px;
+  border: none;
+  padding: 1rem;
+  
+}
+
 .button {
   border: none;
   outline: none;
@@ -161,7 +168,7 @@ body.dark-theme {
   overflow: hidden; /* For animation ScrollReveal */
 }
 
-/*=============== HEADER & NAV ===============*/
+
 
 .header {
   position: fixed;
@@ -211,7 +218,7 @@ body.dark-theme {
 
 }
 
-@media screen and (max-width:767px) {
+@media screen and (max-width:967px) {
   .nav__menu {
     position: fixed;
     top: -100%;
@@ -274,20 +281,15 @@ body.dark-theme {
   top: 0;
 }
 
-/* Show menu */
 
 
-/* Change background header */
+
+
 .bg-header {
   box-shadow: 0 2px 8px hsla(19, 64%, 24%, .1);
 }
 
 
-
-/* Active link */
-
-
-/*=============== HOME ===============*/
 .home {
   position: relative;
 }
@@ -375,7 +377,6 @@ body.dark-theme {
 }
 
 
-/*=============== ABOUT ===============*/
 .about {
   position: relative;
 }
@@ -413,7 +414,6 @@ body.dark-theme {
   bottom: 10rem;
 }
 
-/*=============== POPULAR ===============*/
 .popular__container {
   padding-top:  4rem;
   grid-template-columns: 250px;
@@ -481,7 +481,6 @@ body.dark-theme {
   transform: translateY(-.50rem);
 }
 
-/*=============== RECENTLY ===============*/
 .recently {
   position: relative;
 }
@@ -532,7 +531,6 @@ body.dark-theme {
   transform: rotate(40deg);
 }
 
-/*=============== NEWSLETTER ===============*/
  .newsletter__container {
   position: relative;
 }
@@ -592,7 +590,6 @@ body.dark-theme {
   transform: rotate(45deg);
 }
 
-/*=============== FOOTER ===============*/
 .footer {
   position: relative;
   padding-block: 3rem 2rem;
@@ -697,7 +694,6 @@ color: var(--first-color);
   color: var(--text-color-light);
 }
 
-/*=============== SCROLL BAR ===============*/
 ::-webkit-scrollbar {
   width: .6rem;
   border-radius: .5rem;
@@ -713,7 +709,6 @@ color: var(--first-color);
   background-color: hsla(19, 8%, 55%);
 }
 
-/*=============== SCROLL UP ===============*/
 .scrollup {
   position: fixed;
   right: 1rem;
@@ -733,19 +728,9 @@ color: var(--first-color);
   transform: rotateY(-0.25rem);
 }
 
-
-/* Show Scroll Up*/
 .Show_scroll {
   bottom:  3rem;
 }
 
 
-/*=============== BREAKPOINTS ===============*/
-/* For small devices */
-
-
-/* For medium devices */
-
-
-/* For large devices */
 
