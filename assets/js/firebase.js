@@ -9,11 +9,11 @@ const firebaseConfig = {
   measurementId: "G-36F3HXJMFF",
 };
 
+firebase.initializeApp(firebaseConfig);
+
 function addElementInFirebase(REF, data) {
   firebase.database().ref(`${REF}/${randomID()}`).set(data);
 }
-
-firebase.initializeApp(firebaseConfig);
 
 function generateFirebaseItem(ID, value) {
   return {

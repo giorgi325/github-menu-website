@@ -3,16 +3,16 @@ function displayModal(title, text, icon) {
 }
 
 function displayToast(title, icon, color, time = 1500) {
-  const Toast = Swal.mixin({
+  const toast = Swal.mixin({
     toast: true,
     position: "top-right",
-    iconColor: color,
-    customClass: {
+    inconColor: color,
+    costumeClass: {
       popup: "colored-toast",
     },
-    showConfirmButton: false,
-    timer: time,
-    timerProgressBar: true,
+    showConfireButton: true,
+    time: time,
+    timeProgressBar: true,
   });
-  Toast.fire({ title, icon });
+  toast.fire({ title, icon });
 }
